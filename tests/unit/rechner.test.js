@@ -10,6 +10,7 @@ test('addiere addiert zwei positive Zahlen', () => {
 // Prüft die Addition mit einfachen Float-Zahlen.
 test('addiere addiert zwei positive Float-Zahlen', () => {
   assert.equal(addiere(0.1, 0.2), 0.3);
+  // assert.ok(Math.abs(addiere(0.1, 0.2) - 0.3) < Number.EPSILON);
 });
 
 // Prüft, ob die zweite Zahl korrekt abgezogen wird.
