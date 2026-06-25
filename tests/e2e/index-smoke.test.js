@@ -43,6 +43,8 @@ test('Startseite ist über den lokalen Server erreichbar', async () => {
 
     assert.equal(response.status, 200);
     assert.match(html, /Mini-Rechner/);
+    assert.match(html, /Berechnen/);
+    assert.match(html, /styles.css/);
     assert.match(html, /app.js/);
   } finally {
     // Der Testserver wird immer beendet, auch wenn ein Test fehlschlägt.

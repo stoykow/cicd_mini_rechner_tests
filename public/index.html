@@ -4,12 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mini-Rechner</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
-      <h1>Mini-Rechner</h1>
-      <p id="status">Bereit für Tests.</p>
-      <button id="demo-button" type="button">Demo rechnen</button>
+      <section class="rechner" aria-labelledby="titel">
+        <h1 id="titel">Mini-Rechner</h1>
+
+        <form id="rechner-form">
+          <label>
+            Erste Zahl
+            <input id="zahl-a" name="zahl-a" type="number" step="any" value="2" required>
+          </label>
+
+          <label>
+            Rechenart
+            <select id="operator" name="operator">
+              <option value="plus">+</option>
+              <option value="minus">-</option>
+              <option value="mal">*</option>
+              <option value="geteilt">/</option>
+            </select>
+          </label>
+
+          <label>
+            Zweite Zahl
+            <input id="zahl-b" name="zahl-b" type="number" step="any" value="3" required>
+          </label>
+
+          <button type="submit">Berechnen</button>
+        </form>
+
+        <output id="ergebnis" aria-live="polite">Ergebnis: 5</output>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
