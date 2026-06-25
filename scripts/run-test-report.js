@@ -9,7 +9,9 @@ const result = spawnSync(
     '--test',
     '--test-reporter=tap',
     '--test-reporter-destination=reports/test-output.tap',
-    'tests/**/*.test.js'
+    'tests/unit/rechner.test.js',
+    'tests/integration/report.test.js',
+    'tests/e2e/index-smoke.test.js'
   ],
   { stdio: 'inherit' }
 );
