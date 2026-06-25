@@ -1,8 +1,10 @@
 import { mkdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 
+// Legt den Ordner für Testberichte an, falls er noch fehlt.
 mkdirSync('reports', { recursive: true });
 
+// Startet Node im Testmodus und schreibt das Ergebnis als TAP-Datei.
 const result = spawnSync(
   process.execPath,
   [
@@ -16,4 +18,5 @@ const result = spawnSync(
   { stdio: 'inherit' }
 );
 
+// Gibt denselben Fehlercode zurück wie der Testlauf.
 process.exit(result.status ?? 1);
