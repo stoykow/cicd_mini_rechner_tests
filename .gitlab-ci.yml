@@ -1,0 +1,13 @@
+stages:
+  - test
+
+test:
+  stage: test
+  image: node:20
+  script:
+    - npm test
+    - npm run test:report
+  artifacts:
+    when: always
+    paths:
+      - reports/test-output.tap
